@@ -17,14 +17,13 @@ import Tag from '../components/Tag';
 
 import Divider from '@material-ui/core/Divider';
 import ProjectJSON from '../components/ProjectJSON';
-import Gallery from '../components/Gallery';
-import Drawer from '../components/Drawer';
 import Modal from '../components/Modal';
-import TopText from '../components/TopText';
 
 import Fade from 'react-reveal/Fade';
 import HeadShake from 'react-reveal/HeadShake';
-import BGHead from '../components/BGHead';
+
+import Gallery from "react-photo-gallery";
+import { photos } from "../components/PhotoGal";
 
 
 class App extends Component {
@@ -224,8 +223,12 @@ class App extends Component {
             </div>
 
             <Divider letiant="middle" className="my-5"/>
-            <BGHead />
-            <TopText />
+            
+
+
+
+<Gallery photos={photos} direction={"column"} />
+
             
         </div>
     );
